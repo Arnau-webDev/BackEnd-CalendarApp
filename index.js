@@ -23,7 +23,10 @@ app.use(express.json());
 //Routes
 app.use("/api/auth", require("./routes/auth"));
 
+//Events
+app.use("/api/events", require("./routes/events"));
+
 // Listen for requests
 app.listen(process.env.PORT, () => {
     console.log(`Servidor corriendo en puerto ${process.env.PORT}`);
-})
+});
